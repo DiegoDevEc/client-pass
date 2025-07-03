@@ -780,8 +780,10 @@ const passwordlessCheckID = async (QRReg) => {
 	};   
 
     return (
-      <div className="main_container">
-      <div className="modal">
+      <div className="login-page">
+        <div className="login-form">
+          <div className="main_container">
+            <div className="modal">
         <div style={{ width: '100%', textAlign: 'right' }}>
           <div className="select_lang">
           <select id="lang" name="lang" value={sessionStorage.getItem("language")} onChange={(e) => common.changeLanguage(e.target.value)}>
@@ -1060,7 +1062,16 @@ const passwordlessCheckID = async (QRReg) => {
         </div>
       </div>
     </div>
-    
+    <div className="login-info">
+      <h1>Welcome to<br />our community</h1>
+      <p>
+        Fuse helps developers to build organized and well coded dashboards full of
+        beautiful and rich modules. Join us and start building your application
+        today.
+      </p>
+    </div>
+  </div>
+
     );
 }
 
