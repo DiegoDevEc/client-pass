@@ -82,6 +82,42 @@ input:disabled{ background: #F0F0F0}
 .menbership a::after{content: "|";font-size: 10px;margin:0 5px 0 15px;position: relative;top: -1px; color: #333333;}
 .menbership a:last-child:after{ content: "";}
 
+/* Login page layout */
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-info {
+  flex: 1;
+  background-color: #0a1929;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-info p {
+  max-width: 400px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
 /* loading*/
 .loadbar em{display: none; z-index: 2; text-align: center; position: absolute; width: 100%; font-size: 24px; font-weight: 600; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); line-height: 50px; letter-spacing: 1px;}
 .loadbar.on em{ display: block}
@@ -102,6 +138,14 @@ input:disabled{ background: #F0F0F0}
   .sample_site li a{ width: 100%;}
   .modal_bg {position: fixed;}
   .login_article {width: 90%;}
+  .login-page {
+    flex-direction: column;
+  }
+  .login-form,
+  .login-info {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
