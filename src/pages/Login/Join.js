@@ -56,7 +56,7 @@ function Join(props) {
       return false;
     }
     const method = "post";
-    const url = "http://localhost/api/Login/join";
+    const url = "http://129.212.181.12/api/Login/join";
     var reqeustData = {
       id: formData.id,
       pw: formData.pw,

@@ -53,7 +53,7 @@ function Changepw(props) {
       return false;
     }
     const method = "post";
-    const url = "http://localhost/api/Login/changepw";
+    const url = "http://129.212.181.12/api/Login/changepw";
     var reqeustData = {
       id: formData.id,
       pw: formData.pw
