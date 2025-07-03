@@ -81,6 +81,10 @@ function Main(props) {
                 <p style={pStyle}>
                   <strong>{t("Main.041")}</strong>
                   <span>{t("Main.042")}</span>
+                  <a href="#" onClick={() => movePage("/dashboard")} style={buttonStyle}>
+                    <em className="btn" id="btn_dashboard">{t("Main.064")}</em>
+                  </a>
+                  &nbsp;&nbsp;
                   <a href="#" onClick={logout} style={buttonStyle}>
                     <em className="btn" id="btn_logout">{t("Main.004")}</em>
                   </a>

@@ -5,6 +5,7 @@ import Login from "../Login/Login";
 import ChangePW from "../Login/Changepw";
 import Join from "../Login/Join";
 import Main from "../Main";
+import Dashboard from "../Dashboard/Dashboard";
 
 function RootRoutes() {
     const [isLogin, setIsLogin] = useState(null);
@@ -36,6 +37,7 @@ function RootRoutes() {
             <Route path="/changepw" element={isLogin ? <Main /> : <ChangePW />} />
             <Route path="/join" element={isLogin ? <Main /> : <Join />} />
             <Route path="/main" element={isLogin ? <Main /> : <Login />} />
+            <Route path="/dashboard" element={isLogin ? <Dashboard /> : <Login />} />
         </Routes>
     );
 }

@@ -62,5 +62,9 @@
         "061": "Waiting for QR code registration.",
         "062": "Waiting for authentication.",
         "063": "Confirm after mobile authentication"
+        ,"064": "Dashboard"
+        ,"065": "Connected clients"
+        ,"066": "Registered clients"
+        ,"067": "Deleted clients"
     }
 }
