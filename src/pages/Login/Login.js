@@ -105,7 +105,7 @@ function Login(props) {
 				return false;
 			}
 			const method = "post";
-			const url = "http://129.212.181.12/api/Login/loginCheck";
+			const url = "https://apipas.playtodoo.com/api/Login/loginCheck";
 			const data = qs.stringify(formData);
 			const config = {
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -168,7 +168,7 @@ function Login(props) {
 	const getTokenForOneTime = async () => {
 		let ret_val = "";
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 		const reqeustData = {
 			url: "getTokenForOneTimeUrl",
 			params: "userId=" + formData.id
@@ -195,7 +195,7 @@ function Login(props) {
 	const passwordlessCheckID = async (QRReg) => {
 		let ret_val = "";
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 		const reqeustData = {
 			url: "isApUrl",
 			params: "userId=" + formData.id + "&QRReg=" + QRReg
@@ -230,7 +230,7 @@ function Login(props) {
 
 	const loginPasswordlessStart = async (token) => {
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 		let reqeustData = {
 			url: "getSpUrl",
 			params: "userId=" + formData.id + "&token=" + token
@@ -270,7 +270,7 @@ function Login(props) {
 
 			if (sessionId !== undefined && sessionId != null && sessionId !== "") {
 				const method = "post";
-				const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+				const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 				reqeustData = {
 					url: "cancelUrl",
 					params: "userId=" + formData.id + "&sessionId=" + sessionId
@@ -419,7 +419,7 @@ function Login(props) {
 		sessionId = sessionId = window.localStorage.getItem('session_id');
 		if (gap_millisec < passwordlessTerms.current * 1000 - 1000) {
 			const method = "post";
-			const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+			const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 			var reqeustData = {
 				url: "resultUrl",
 				params: "userId=" + formData.id + "&sessionId=" + sessionId
@@ -492,7 +492,7 @@ function Login(props) {
 		}
 
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessManageCheck";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessManageCheck";
 		var reqeustData = {
 			id: formData.id,
 			pw: formData.pw
@@ -530,7 +530,7 @@ function Login(props) {
 
 		var id = formData.id;
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 		var reqeustData = {
 			url: "joinApUrl",
 			params: "userId=" + id + "&token=" + PasswordlessToken
@@ -651,7 +651,7 @@ function Login(props) {
 		if (window.confirm(t("Main.022"))) {
 			var id = formData.id;
 			const method = "post";
-			const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+			const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 			var reqeustData = {
 				url: "withdrawalApUrl",
 				params: "userId=" + id + "&token=" + PasswordlessToken
@@ -757,7 +757,7 @@ function Login(props) {
 		var id = formData.id;
 		sessionId = window.localStorage.getItem('session_id');
 		const method = "post";
-		const url = "http://129.212.181.12/api/Login/passwordlessCallApi";
+		const url = "https://apipas.playtodoo.com/api/Login/passwordlessCallApi";
 		var reqeustData = {
 			url: "cancelUrl",
 			params: "userId=" + id + "&sessionId=" + sessionId

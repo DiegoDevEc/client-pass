@@ -39,7 +39,7 @@ function Main(props) {
 
     const logout = async () =>  {
         const method = "post";
-        const url = "http://129.212.181.12/api/Login/logout";
+        const url = "https://apipas.playtodoo.com/api/Login/logout";
         const data = "";
         const config = "";
         const response = await common.apiRequest(method, url, data, config);
@@ -51,7 +51,7 @@ function Main(props) {
         
         if(window.confirm(t("Main.011") + "\n" + t("Main.012"))) {
             const method = "post";
-            const url = "http://129.212.181.12/api/Login/withdraw";
+            const url = "https://apipas.playtodoo.com/api/Login/withdraw";
             const data = "";
             const config = "";
             const response = await common.apiRequest(method, url, data, config);
