@@ -1063,8 +1063,8 @@ function Login(props) {
 					</div>
 				</div>
 				<div className="login-info">
-					<h1>Welcome to<br />our community</h1>
-					<p>
+					<h1 style={{padding: '150px' }} >Welcome to<br />our community</h1>
+					<p style={{ fontSize: '20px', lineHeight: '25px' , textAlign: 'center'}}>
 						Fuse helps developers to build organized and well coded dashboards full of
 						beautiful and rich modules. Join us and start building your application
 						today.

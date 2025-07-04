@@ -6,7 +6,7 @@
 .fr{ float: right}
 .fl{ float: left;}
 
-body{overflow: scroll;  overflow-x: hidden; background: rgba(0,0,0,0.21);}
+body{overflow: scroll;  overflow-x: hidden; background: rgba(255, 255, 255, 0.21);}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -96,27 +96,31 @@ input:disabled{ background: #F0F0F0}
 }
 
 .login-info {
-  flex: 1;
-  background-color: #143c66b8;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 50px;
   height: 100%;
+  width: 80%;
+  background: linear-gradient(135deg, #3C9BEE, #143c66);
+  background-size: 200% 200%;
+  animation: gradientBG 6s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .login-info h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .login-info p {
-  max-width: 400px;
+  max-width: 100%;
   font-size: 1rem;
   opacity: 0.8;
+  padding: 0 2rem;
 }
 
 /* loading*/
