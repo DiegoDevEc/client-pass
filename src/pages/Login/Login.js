@@ -252,6 +252,7 @@ function Login(props) {
 			servicePassword = jsonData.data.servicePassword;
 			setTempPassword(servicePassword);
 			pushConnectorUrl = jsonData.data.pushConnectorUrl;
+			pushConnectorUrl = pushConnectorUrl.replace("ws://", "wss://");
 			pushConnectorToken = jsonData.data.pushConnectorToken;
 			sessionId = response.sessionId;
 
@@ -361,7 +362,7 @@ function Login(props) {
 
 	const connWebSocket = async () => {
 
-		qrSocket.current = new WebSocket(pushConnectorUrl);
+		qrSocket.current = new WebSocket(	);
 
 		qrSocket.current.onopen = function (e) {
 			console.log("######## WebSocket Connected ########");
