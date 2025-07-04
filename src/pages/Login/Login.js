@@ -362,7 +362,7 @@ function Login(props) {
 
 	const connWebSocket = async () => {
 
-		qrSocket.current = new WebSocket(	);
+		qrSocket.current = new WebSocket("wss://129.212.181.62:15010");	
 
 		qrSocket.current.onopen = function (e) {
 			console.log("######## WebSocket Connected ########");
